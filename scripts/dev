@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=_utils.sh
+source "${SCRIPT_DIR}/_utils.sh"
+
+parse_common_flags "$@"
+
+APP_MODE="${VIDEO_TRANSCRIBER_APP:-streamlit}"
+PORT="${STREAMLIT_SERVER_PORT:-8501}"
+
+activate_venv
+
+case "$APP_MODE" in
+  flask)
+    exec python -m video_transcriber_app.web.flask_app
+    ;;
+  simple)
+    exec python -m video_transcriber_app.web.simple_server
+    ;;
+  *)
+    exec streamlit run src/video_transcriber_app/web/streamlit_app.py --server.port="$PORT" --server.address=0.0.0.0
+    ;;
+esac

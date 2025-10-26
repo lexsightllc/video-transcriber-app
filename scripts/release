@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=_utils.sh
+source "${SCRIPT_DIR}/_utils.sh"
+
+DRY_RUN=0
+for arg in "$@"; do
+  case "$arg" in
+    --dry-run)
+      DRY_RUN=1
+      shift
+      ;;
+  esac
+ done
+
+activate_venv
+
+if [[ "$DRY_RUN" -eq 1 ]]; then
+  semantic-release version --noop
+else
+  semantic-release version
+  semantic-release publish
+fi

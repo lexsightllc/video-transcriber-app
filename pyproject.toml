@@ -1,0 +1,123 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-transcriber-app"
+version = "0.1.0"
+description = "Whisper-based video transcription tooling with optional Phi-3 analysis."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Video Transcriber Maintainers", email = "maintainers@example.com" }
+]
+dependencies = [
+  "streamlit>=1.29.0",
+  "moviepy>=1.0.3",
+  "openai-whisper>=20230314",
+  "torch>=2.0.0",
+  "numpy",
+  "ffmpeg-python",
+  "transformers>=4.36.0",
+  "accelerate>=0.24.0",
+  "bitsandbytes>=0.41.0",
+  "sentencepiece>=0.1.99",
+  "protobuf>=3.20.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "black>=24.3.0",
+  "isort>=5.12.0",
+  "mypy>=1.8.0",
+  "pre-commit>=3.6.0",
+  "pytest>=7.4.0",
+  "pytest-cov>=4.1.0",
+  "ruff>=0.4.0",
+  "types-setuptools",
+  "build>=1.0.3",
+  "twine>=4.0.2",
+  "pip-tools>=7.3.0",
+  "python-semantic-release>=9.5.0",
+  "bandit>=1.7.5",
+  "safety>=3.2.0",
+  "cyclonedx-bom>=3.13.0",
+  "mkdocs>=1.5.3",
+  "mkdocs-material>=9.5.3",
+  "mkdocstrings[python]>=0.24.0",
+  "pytest-mock>=3.12.0",
+  "commitizen>=3.20.0"
+]
+
+[project.scripts]
+video-transcriber-cli = "video_transcriber_app.cli_app:main"
+
+[project.urls]
+Homepage = "https://example.com/video-transcriber"
+Documentation = "https://example.com/video-transcriber/docs"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.black]
+target-version = ["py311"]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+src_paths = ["src", "tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "UP", "DTZ", "ERA", "TRY", "RUF"]
+ignore = ["E203"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*" = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+strict_optional = true
+show_error_codes = true
+pretty = true
+mypy_path = "src"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra --strict-markers --disable-warnings"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["video_transcriber_app"]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+fail_under = 60
+show_missing = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version = "0.1.0"
+
+[tool.semantic_release]
+branch = "main"
+version_variable = "pyproject.toml:version"
+

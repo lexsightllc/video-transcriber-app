@@ -1,0 +1,5 @@
+site_name: Video Transcriber
+repo_url: https://example.com/video-transcriber
+nav:
+  - Home: index.md
+docs_dir: docs
