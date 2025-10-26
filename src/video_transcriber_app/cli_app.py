@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MPL-2.0
+
 """Command-line interface for the video transcriber application."""
 
 from __future__ import annotations

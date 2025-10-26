@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 """
 Phi-3 Brain Module for Video Transcription Pipeline
 This module integrates Microsoft's Phi-3 model as the intelligent core

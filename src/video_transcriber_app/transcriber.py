@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 """Core transcription services for the Video Transcriber application."""
 
 from __future__ import annotations

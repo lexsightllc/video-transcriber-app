@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MPL-2.0
+
 """Flask-based Video Transcriber web application."""
 
 from __future__ import annotations

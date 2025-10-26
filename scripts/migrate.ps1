@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 . "$PSScriptRoot/Utils.ps1"
 
 if (Test-Path "$ProjectRoot/alembic.ini") {

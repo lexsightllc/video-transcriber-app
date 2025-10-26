@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.4.1
@@ -31,3 +33,11 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: add-spdx-header
+        name: Ensure SPDX License Header
+        entry: scripts/add_spdx_header.py
+        language: system
+        pass_filenames: true
+        types_or: [python, shell, yaml, toml, markdown]

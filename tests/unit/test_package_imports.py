@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 """Unit tests ensuring the core package exports are available."""
 
 from video_transcriber_app import (
