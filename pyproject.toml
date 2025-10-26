@@ -8,9 +8,12 @@ version = "0.1.0"
 description = "Whisper-based video transcription tooling with optional Phi-3 analysis."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { file = "LICENSE" }
+license = { text = "MPL-2.0" }
 authors = [
   { name = "Video Transcriber Maintainers", email = "maintainers@example.com" }
+]
+classifiers = [
+  "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
 ]
 dependencies = [
   "streamlit>=1.29.0",

@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MPL-2.0 -->
+
 # Contributing
 
 Thanks for your interest in improving the Video Transcriber application!
@@ -20,3 +22,7 @@ Thanks for your interest in improving the Video Transcriber application!
 - Ensure CI passes (`make check`).
 - Update documentation, changelog, and project metadata when introducing significant changes.
 - Request review from the CODEOWNERS listed in `.github/CODEOWNERS`.
+
+## License for Contributions
+- By submitting a contribution, you agree that it will be licensed under the [Mozilla Public License 2.0](LICENSE), matching the outbound license for this project.
+- Contributions must not include code that is incompatible with MPL-2.0. Ensure third-party additions retain their original license information in NOTICE or vendor directories as applicable.

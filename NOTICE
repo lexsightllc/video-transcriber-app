@@ -1,0 +1,14 @@
+SPDX-License-Identifier: MPL-2.0
+
+ProjectName © 2025 Augusto "Guto" Ochoa Ughini
+
+This project is licensed under the Mozilla Public License 2.0. See the LICENSE file for the full text.
+
+This project uses third-party open source software that remains under its original licenses, including but not limited to:
+- streamlit (Apache License 2.0)
+- moviepy (MIT License)
+- openai-whisper (MIT License)
+- torch (BSD-style license)
+- transformers (Apache License 2.0)
+
+No third-party source code is vendored into this repository; refer to dependency metadata for details. Distribution artifacts must include this NOTICE file alongside LICENSE.

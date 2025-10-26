@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 . "$PSScriptRoot/Utils.ps1"
 
 Remove-Item -Recurse -Force -ErrorAction SilentlyContinue "$ProjectRoot/build"

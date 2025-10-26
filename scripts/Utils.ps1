@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 $ScriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Global:ProjectRoot = Resolve-Path (Join-Path $ScriptRoot "..").Path
 $Global:VenvDir = if ($env:VENV_DIR) { $env:VENV_DIR } else { Join-Path $ProjectRoot ".venv" }

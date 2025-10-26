@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MPL-2.0
 # Runtime dependencies are managed via pyproject.toml.
 # Install in editable mode for development environments.
 -e .

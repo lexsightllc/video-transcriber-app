@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 """Integration-style tests for CLI presentation helpers."""
 
 from video_transcriber_app.cli_app import display_analysis_results

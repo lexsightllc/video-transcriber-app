@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MPL-2.0 -->
+
 # Code of Conduct
 
 We are committed to providing a welcoming and inclusive experience for everyone.

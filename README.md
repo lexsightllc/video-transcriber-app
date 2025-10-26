@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: MPL-2.0 -->
+
 # Video Transcriber
 
 Video Transcriber is a Python-based toolkit for converting video content into high quality SRT transcripts using OpenAI Whisper with optional Phi-3 analysis. The project ships with a Streamlit experience, a Flask backend, and a CLI workflow so the same transcription core can be reused across multiple form factors.
@@ -113,3 +115,9 @@ Architectural decision records live under `docs/adr/`. Additional documentation 
 
 ## Contributing
 Please review [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md) before opening pull requests. Run `scripts/check` and ensure all automation passes prior to submission. Conventional Commit messages are required to satisfy semantic-release.
+
+## License
+Video Transcriber is distributed under the [Mozilla Public License 2.0](LICENSE). The MPL requires that any modifications to MPL-covered files remain available under the same license, but it permits you to combine those files within larger proprietary solutions without obligating you to open your entire codebase.
+
+## Credits
+Copyright © 2025 Augusto "Guto" Ochoa Ughini. See [NOTICE](NOTICE) for attribution details for third-party dependencies and ensure that NOTICE accompanies any distributions that bundle this project.

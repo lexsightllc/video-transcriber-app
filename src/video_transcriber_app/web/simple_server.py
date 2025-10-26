@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MPL-2.0
+
 """
 Simple HTTP server to test if the basic web functionality works.
 This will help diagnose if the issue is with Streamlit specifically or with network/port access.

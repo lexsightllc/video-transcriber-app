@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MPL-2.0
+
 """Streamlit application for enhanced video transcription."""
 
 from __future__ import annotations
