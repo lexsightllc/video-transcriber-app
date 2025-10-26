@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=_utils.sh
+source "${SCRIPT_DIR}/_utils.sh"
+
+parse_common_flags "$@"
+
+ensure_venv
+activate_venv
+
+pip install --upgrade pip
+pip install -e .[dev]
+
+run_pre_commit
+
+git config commit.template "${ROOT_DIR}/.gitmessage"
+
+echo "✅ Environment ready at ${VENV_DIR}";

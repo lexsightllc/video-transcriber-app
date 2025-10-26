@@ -1,0 +1,16 @@
+name: video-transcriber-app
+language: python
+package_manager: pip
+runtime:
+  python: "3.11"
+entrypoints:
+  cli: video-transcriber-cli
+  streamlit: src/video_transcriber_app/web/streamlit_app.py
+  flask: src/video_transcriber_app/web/flask_app.py
+ports:
+  streamlit: 8501
+  flask: 5000
+service_type: application
+owners:
+  - team: video-transcriber/maintainers
+    contact: maintainers@example.com

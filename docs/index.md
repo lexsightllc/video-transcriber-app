@@ -1,0 +1,3 @@
+# Video Transcriber Documentation
+
+This documentation site is built with MkDocs. Regenerate using `scripts/gen-docs`.

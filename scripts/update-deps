@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=_utils.sh
+source "${SCRIPT_DIR}/_utils.sh"
+
+activate_venv
+
+pip-compile pyproject.toml --extra dev --output-file requirements.lock
+pip-compile pyproject.toml --output-file requirements-runtime.lock

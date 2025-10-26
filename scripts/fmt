@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=_utils.sh
+source "${SCRIPT_DIR}/_utils.sh"
+
+activate_venv
+
+ruff check --select I --fix src tests
+ruff format src tests
+black src tests
+isort src tests
